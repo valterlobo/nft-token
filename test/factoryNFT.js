@@ -15,9 +15,12 @@ describe("Minting the token and returning it", function () {
     const value = event.args[2];
     const tokenId = value.toNumber(); // Getting the tokenID
 
+
     const tokenURI = await factoryContract.tokenURI(tokenId) // Using the tokenURI from ERC721 to retrieve de metadata
 
     expect(tokenURI).to.be.equal(metadata); // Comparing and testing
+
+    console.log(tokenURI);
 
   });
 });
